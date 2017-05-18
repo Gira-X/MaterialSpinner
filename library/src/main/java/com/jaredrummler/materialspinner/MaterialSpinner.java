@@ -398,7 +398,7 @@ public class MaterialSpinner extends TextView {
       popupWindow.showAsDropDown(this);
     } else {
       int[] location = new int[2];
-      getLocationOnScreen(location);
+      getLocationInWindow(location);
       int x = location[0];
       int y = getHeight() + location[1];
       popupWindow.showAtLocation(this, Gravity.TOP | Gravity.START, x, y);
