@@ -85,6 +85,21 @@ public class MaterialSpinner extends TextView {
     init(context, attrs);
   }
 
+  /**
+   * In case you want to make the MaterialSpinner full width and be able to align the
+   * right dropdown icon with other views.
+   *
+   * We don't care for right-to-left.
+   */
+  public void updateRightPaddings(final int pixels) {
+    Resources resources = getResources();
+    int left, right, bottom, top;
+    right = bottom = top = resources.getDimensionPixelSize(R.dimen.ms__padding_top);
+    left = resources.getDimensionPixelSize(R.dimen.ms__padding_left);
+    right = pixels;
+    setPadding(left, top, right, bottom);
+  }
+
   private void init(Context context, AttributeSet attrs) {
     TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.MaterialSpinner);
     int defaultColor = getTextColors().getDefaultColor();
