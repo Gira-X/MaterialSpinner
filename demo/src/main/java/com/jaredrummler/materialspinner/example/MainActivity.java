@@ -67,6 +67,9 @@ public class MainActivity extends AppCompatActivity {
         Snackbar.make(spinner, "Nothing selected", Snackbar.LENGTH_LONG).show();
       }
     });
+
+    MaterialSpinner bottomSpinner = (MaterialSpinner) findViewById(R.id.bottomSpinner);
+    bottomSpinner.setItems(ANDROID_VERSIONS);
   }
 
 }

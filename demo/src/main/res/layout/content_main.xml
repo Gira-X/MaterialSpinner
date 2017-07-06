@@ -30,11 +30,19 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
 
-  <com.jaredrummler.materialspinner.MaterialSpinner
-      android:id="@+id/spinner"
-      app:ms_dropdown_max_height="350dp"
-      app:ms_dropdown_height="wrap_content"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"/>
+    <com.jaredrummler.materialspinner.MaterialSpinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ms_dropdown_height="wrap_content"
+        app:ms_dropdown_max_height="350dp"/>
+
+    <com.jaredrummler.materialspinner.MaterialSpinner
+        android:id="@+id/bottomSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        app:ms_dropdown_height="wrap_content"/>
 
 </RelativeLayout>
